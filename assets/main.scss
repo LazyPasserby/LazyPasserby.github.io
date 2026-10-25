@@ -387,6 +387,9 @@ a { color: inherit; text-decoration: none; }
 
 .post-body hr { border: none; border-top: 1px solid var(--line-soft); margin: 2.4em 0; }
 
+/* 正文开头的第一条分隔线是多余的（标题下已经有一条粗线了） */
+.post-body > hr:first-child { display: none; }
+
 /* ---------- 页脚 ---------- */
 .site-foot { padding: 64px 0 40px; }
 
