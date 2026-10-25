@@ -1,6 +1,5 @@
 ---
 layout: home
-title: 首页
 list_title: 最新文章
 ---
 
