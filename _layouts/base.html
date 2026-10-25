@@ -1,0 +1,74 @@
+---
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} — {{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+<link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}" title="{{ site.title }}">
+</head>
+<body class="page-{{ page.layout | default: 'default' }}">
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site-head">
+  <div class="shell nav-row">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title_short | default: site.title }}</a>
+    <nav class="nav">
+      {%- for item in site.nav %}
+      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      {%- endfor %}
+    </nav>
+    <a class="pill" href="mailto:{{ site.email }}">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M3 6.5h18v11H3z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 7l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      <span>联系我</span>
+    </a>
+  </div>
+</header>
+
+<div class="shell rules" aria-hidden="true">
+  <div class="rule-meta">
+    <span>{{ site.title }}</span>
+    <span>{{ site.description }}</span>
+    <span>{{ page.year_label | default: site.year_label }}</span>
+  </div>
+  <div class="rule thick"></div>
+  <div class="rule"></div>
+  <div class="rule"></div>
+  <div class="rule"></div>
+  <div class="rule"></div>
+</div>
+
+{%- if page.layout == 'home' %}
+<div class="band">
+  <span class="band-text">{{ site.tagline }}</span>
+  <a class="band-arrow" href="#main" aria-label="向下浏览">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+  </a>
+</div>
+{%- endif %}
+
+<main id="main" class="shell">
+{{ content }}
+</main>
+
+<footer class="site-foot">
+  <div class="shell rules" aria-hidden="true">
+    <div class="rule-meta">
+      <span>{{ site.title }}</span>
+      <span>{{ site.description }}</span>
+      <span>{{ site.year_label }}</span>
+    </div>
+    <div class="rule thick"></div>
+    <div class="rule"></div>
+  </div>
+  <div class="shell foot-row">
+    <span>© {{ 'now' | date: "%Y" }} {{ site.author }}</span>
+    <span>由 <a href="https://jekyllrb.com">Jekyll</a> 生成 · 托管于 <a href="https://pages.github.com">GitHub Pages</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

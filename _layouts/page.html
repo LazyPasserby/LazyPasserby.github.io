@@ -1,0 +1,13 @@
+---
+layout: base
+---
+<article class="post">
+  <div class="post-head">
+    <h1 class="h-hero">{{ page.title }}</h1>
+    <span class="ratio">{{ page.index_label | default: '1.0' }}</span>
+  </div>
+  <div class="head-rule" aria-hidden="true"></div>
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>

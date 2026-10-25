@@ -1,31 +1,41 @@
+# ===== 站点基本信息 =====
 title: LazyPasserby 的博客
+# 顶栏左上角显示的短名（会自动加个 ® 小标）
+title_short: LazyPasserby
 description: 记录折腾、学习与生活的地方
+tagline: 记录折腾、学习与生活的琐碎日常
 author: LazyPasserby
+# 右上角「联系我」按钮用的邮箱
+email: 1452838495@qq.com
+year_label: 2026
 
-# 网址（GitHub Pages 会自动设置，这里写死一份更保险）
-url: "https://lazypasserby.github.io"
+# ===== 网址（GitHub Pages 已自动填好） =====
+url: https://lazypasserby.github.io
 baseurl: ""
 
-# 站点语言
-lang: zh-CN
+# ===== 主题：改用自己写的版式，不再依赖 minima =====
+# （保留了 _layouts 自定义布局，所以这里不写 theme）
 
-# 主题（minima 是 GitHub Pages 官方自带主题，不需要任何插件）
-theme: minima
+# ===== 导航 =====
+nav:
+  - name: 关于我
+    url: /about/
+  - name: 全部文章
+    url: /archive/
+  - name: RSS 订阅
+    url: /feed.xml
 
-# 导航栏
-header_pages:
-  - about.md
-
-# 让 minima 显示文章摘要
-show_excerpts: true
-
-# Markdown 设置
-markdown: kramdown
+# ===== 文章链接格式 =====
 permalink: /:year/:month/:title/
 
-# 时区
 timezone: Asia/Shanghai
 
-# 排除不需要发布到网站的文件
-exclude:
-  - README.md
+# ===== 构建设置 =====
+markdown: kramdown
+future: true
+excerpt_separator: "\n\n"
+
+# GitHub Pages 自带插件，直接用
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

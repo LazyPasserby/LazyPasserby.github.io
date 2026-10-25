@@ -1,0 +1,19 @@
+---
+layout: base
+---
+<article class="post">
+  <div class="post-head">
+    <h1 class="h-hero">{{ page.title }}</h1>
+    <span class="ratio">{{ page.index_label | default: page.date | date: '%Y.%m' }}</span>
+  </div>
+  <div class="head-rule" aria-hidden="true"></div>
+  <div class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y 年 %m 月 %d 日" }}</time>
+    {%- if page.categories.size > 0 %}
+    <span class="row-tags">{% for c in page.categories %}<span class="tag">{{ c }}</span>{% endfor %}</span>
+    {%- endif %}
+  </div>
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>
