@@ -1,0 +1,32 @@
+title: LazyPasserby 的博客
+description: 记录折腾、学习与生活的地方
+author: LazyPasserby
+email: 1452838495@qq.com
+
+# 网址（GitHub Pages 会自动设置，这里写死一份更保险）
+url: "https://lazypasserby.github.io"
+baseurl: ""
+
+# 站点语言
+lang: zh-CN
+
+# 主题（minima 是 GitHub Pages 官方自带主题，不需要任何插件）
+theme: minima
+
+# 导航栏
+header_pages:
+  - about.md
+
+# 让 minima 显示文章摘要
+show_excerpts: true
+
+# Markdown 设置
+markdown: kramdown
+permalink: /:year/:month/:title/
+
+# 时区
+timezone: Asia/Shanghai
+
+# 排除不需要发布到网站的文件
+exclude:
+  - README.md
